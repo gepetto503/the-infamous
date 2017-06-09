@@ -4,7 +4,7 @@ $neat-grid: (
 );
 
 .container {
-  border: 5px solid blue;
+  margin-top: 5px;
   @include grid-container;
   @include tablet {
 
@@ -15,7 +15,6 @@ $neat-grid: (
 
 
 .video-wrapper {
-  border: 1px solid green;
   margin: auto;
   @include grid-column (12);
   // remember that any width will be cancelled out by the calculated width of the column
@@ -33,6 +32,11 @@ $neat-grid: (
   padding: 5px;
 }
 
+#video {
+  width: 100%;
+
+}
+
 .article-wrapper {
   @include grid-column(12);
   @include tablet {
@@ -41,7 +45,6 @@ $neat-grid: (
 }
 
 .article {
-  border: 2px solid pink;
   padding: 10px;
   @include clearfix;
   // @include size(auto 300px);
@@ -51,7 +54,6 @@ $neat-grid: (
 }
 
 .article img {
-  border: 1px dashed grey;
   float: left;
   @include size (50% auto);
   @include tablet {
@@ -68,7 +70,6 @@ $neat-grid: (
 }
 
 .article p {
-  border: 1px dashed grey;
   float: left;
   width: 50%;
   padding: 8px;
@@ -79,18 +80,17 @@ $neat-grid: (
   }
 }
 
-.article:first-child {
-  border: 4px dashed yellow;
+.featured {
+  @extend .article;
+  @include tablet {
+    background-color: white;
+    border: 4px solid $mobb-purple;
+  }
 }
 
-.article:nth-child(2) {
-  border: 4px dashed green;
-}
+.featured p {
+  @include tablet{
+    color: black;
 
-.article:nth-child(3) {
-  border: 4px dashed red;
-}
-
-.article:nth-child(4) {
-  border: 4px dashed brown;
+  }
 }

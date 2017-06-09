@@ -404,6 +404,14 @@ html {
   body {
     background-color: black; } }
 
+a:link {
+  text-decoration: none;
+  color: #382271; }
+
+a:hover {
+  text-decoration: underline;
+  color: #e55a02; }
+
 .header-bg-img {
   height: 300px;
   background: url("../images/the-infamous-small.jpg") center center no-repeat;
@@ -425,14 +433,13 @@ html {
       display: none; } }
 
 .container {
-  border: 5px solid blue; }
+  margin-top: 5px; }
   .container::after {
     clear: both;
     content: "";
     display: block; }
 
 .video-wrapper {
-  border: 1px solid green;
   margin: auto;
   width: calc(100% - 30px);
   float: left;
@@ -451,6 +458,9 @@ html {
 .video {
   padding: 5px; }
 
+#video {
+  width: 100%; }
+
 .article-wrapper {
   width: calc(100% - 30px);
   float: left;
@@ -461,55 +471,49 @@ html {
       float: left;
       margin-left: 15px; } }
 
-.article {
-  border: 2px solid pink;
+.article, .featured {
   padding: 10px; }
-  .article::after {
+  .article::after, .featured::after {
     clear: both;
     content: "";
     display: table; }
   @media (min-width: 768px) {
-    .article {
+    .article, .featured {
       height: 161px; } }
 
-.article img {
-  border: 1px dashed grey;
+.article img, .featured img {
   float: left;
   height: auto;
   width: 50%; }
   @media (min-width: 768px) {
-    .article img {
+    .article img, .featured img {
       width: 25%; } }
 
-.article h3 {
+.article h3, .featured h3 {
   margin-top: 0px;
   margin-bottom: 5px; }
   @media (min-width: 768px) {
-    .article h3 {
+    .article h3, .featured h3 {
       color: white; } }
 
-.article p {
-  border: 1px dashed grey;
+.article p, .featured p {
   float: left;
   width: 50%;
   padding: 8px;
   margin: 0; }
   @media (min-width: 768px) {
-    .article p {
+    .article p, .featured p {
       width: 75%;
       color: white; } }
 
-.article:first-child {
-  border: 4px dashed yellow; }
+@media (min-width: 768px) {
+  .featured {
+    background-color: white;
+    border: 4px solid #382271; } }
 
-.article:nth-child(2) {
-  border: 4px dashed green; }
-
-.article:nth-child(3) {
-  border: 4px dashed red; }
-
-.article:nth-child(4) {
-  border: 4px dashed brown; }
+@media (min-width: 768px) {
+  .featured p {
+    color: black; } }
 
 .whole-page {
   max-width: 1024px;
@@ -525,9 +529,5 @@ html {
 .navbar h4 {
   font-family: impact;
   margin: 0; }
-
-#video {
-  border: 2px dashed purple;
-  width: 100%; }
 
 /*# sourceMappingURL=output.css.map */
