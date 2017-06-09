@@ -397,7 +397,7 @@ html {
 *::after {
   box-sizing: inherit; }
 
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 768px) {
   body {
     background-color: black; } }
 @media (min-width: 1024px) {
@@ -408,7 +408,7 @@ html {
   height: 300px;
   background: url("../images/the-infamous-small.jpg") center center no-repeat;
   background-size: cover; }
-  @media (min-width: 768px) and (max-width: 1023px) {
+  @media (min-width: 768px) {
     .header-bg-img {
       background-image: url("../images/large-banner.jpg"); } }
   @media (min-width: 1024px) {
@@ -417,7 +417,7 @@ html {
 
 .header h1 {
   padding: 10px; }
-  @media (min-width: 768px) and (max-width: 1023px) {
+  @media (min-width: 768px) {
     .header h1 {
       display: none; } }
   @media (min-width: 1024px) {
@@ -425,60 +425,68 @@ html {
       display: none; } }
 
 .container {
-  border: 1px solid blue; }
+  border: 5px solid blue; }
   .container::after {
     clear: both;
     content: "";
     display: block; }
 
-.row {
-  border: 1px solid red;
-  width: calc(100%);
-  float: left;
-  margin-left: 0px; }
-
-.featured {
+.video-wrapper {
   border: 1px solid green;
   margin: auto;
-  width: calc(100%);
+  width: calc(100% - 30px);
   float: left;
-  margin-left: 0px; }
-  @media (min-width: 768px) and (max-width: 1023px) {
-    .featured {
-      width: calc(50%);
+  margin-left: 15px; }
+  @media (min-width: 768px) {
+    .video-wrapper {
+      width: calc(50% - 22.5px);
       float: left;
-      margin-left: 0px; } }
+      margin-left: 15px; } }
   @media (min-width: 1024px) {
-    .featured {
-      width: calc(50%);
+    .video-wrapper {
+      width: calc(50% - 22.5px);
       float: left;
-      margin-left: 0px; } }
+      margin-left: 15px; } }
+
+.video {
+  padding: 5px; }
+
+.article-wrapper {
+  width: calc(100% - 30px);
+  float: left;
+  margin-left: 15px; }
+  @media (min-width: 768px) {
+    .article-wrapper {
+      width: calc(50% - 22.5px);
+      float: left;
+      margin-left: 15px; } }
 
 .article {
   border: 2px solid pink;
-  padding: 10px;
-  width: calc(100%);
-  float: left;
-  margin-left: 0px; }
+  padding: 10px; }
   .article::after {
     clear: both;
     content: "";
     display: table; }
-  @media (min-width: 768px) and (max-width: 1023px) {
+  @media (min-width: 768px) {
     .article {
-      width: calc(50%);
-      float: left;
-      margin-left: 0px; } }
+      height: 161px; } }
 
 .article img {
   border: 1px dashed grey;
   float: left;
   height: auto;
   width: 50%; }
+  @media (min-width: 768px) {
+    .article img {
+      width: 25%; } }
 
 .article h3 {
   margin-top: 0px;
   margin-bottom: 5px; }
+  @media (min-width: 768px) {
+    .article h3 {
+      color: white; } }
 
 .article p {
   border: 1px dashed grey;
@@ -486,6 +494,22 @@ html {
   width: 50%;
   padding: 8px;
   margin: 0; }
+  @media (min-width: 768px) {
+    .article p {
+      width: 75%;
+      color: white; } }
+
+.article:first-child {
+  border: 4px dashed yellow; }
+
+.article:nth-child(2) {
+  border: 4px dashed green; }
+
+.article:nth-child(3) {
+  border: 4px dashed red; }
+
+.article:nth-child(4) {
+  border: 4px dashed brown; }
 
 .whole-page {
   max-width: 1024px;
@@ -504,7 +528,6 @@ html {
 
 #video {
   border: 2px dashed purple;
-  max-width: 100%;
-  margin: auto; }
+  width: 100%; }
 
 /*# sourceMappingURL=output.css.map */

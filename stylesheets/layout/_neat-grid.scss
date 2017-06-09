@@ -1,10 +1,10 @@
 $neat-grid: (
   columns: 12,
-  gutter: 0px,
+  gutter: 15px,
 );
 
 .container {
-  border: 1px solid blue;
+  border: 5px solid blue;
   @include grid-container;
   @include tablet {
 
@@ -12,14 +12,9 @@ $neat-grid: (
   }
 }
 
-.row {
-  border: 1px solid red;
-  @include grid-column(12);
-  // margin: 5px auto;
-}
 
 
-.featured {
+.video-wrapper {
   border: 1px solid green;
   margin: auto;
   @include grid-column (12);
@@ -34,14 +29,24 @@ $neat-grid: (
   }
 }
 
+.video {
+  padding: 5px;
+}
+
+.article-wrapper {
+  @include grid-column(12);
+  @include tablet {
+    @include grid-column(6);
+  }
+}
+
 .article {
   border: 2px solid pink;
   padding: 10px;
   @include clearfix;
   // @include size(auto 300px);
-  @include grid-column(12);
   @include tablet {
-    @include grid-column(6);
+    height: 161px;
   }
 }
 
@@ -49,11 +54,17 @@ $neat-grid: (
   border: 1px dashed grey;
   float: left;
   @include size (50% auto);
+  @include tablet {
+    width: 25%;
+  }
 }
 
 .article h3 {
   margin-top: 0px;
   margin-bottom: 5px;
+  @include tablet {
+    color: white;
+  }
 }
 
 .article p {
@@ -63,6 +74,23 @@ $neat-grid: (
   padding: 8px;
   margin: 0;
   @include tablet {
-
+    width: 75%;
+    color: white;
   }
+}
+
+.article:first-child {
+  border: 4px dashed yellow;
+}
+
+.article:nth-child(2) {
+  border: 4px dashed green;
+}
+
+.article:nth-child(3) {
+  border: 4px dashed red;
+}
+
+.article:nth-child(4) {
+  border: 4px dashed brown;
 }
