@@ -9,11 +9,18 @@
   background-size: cover;
   @include tablet {
     background-image: url('../images/large-banner.jpg');
-  }
-}
+  };
+  @include desktop {
+    background-image: url('../images/large-banner.jpg');
+  };
+};
 
 .header h1 {
+  padding: 10px;
   @include tablet {
+    display: none;
+  }
+  @include desktop {
     display: none;
   }
 }

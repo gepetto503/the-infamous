@@ -16,6 +16,7 @@
 
 // 3. Base stuff
 @import
+  'base/normalize',
   'base/base',
   'base/fonts',
   'base/typography',
@@ -26,13 +27,14 @@
   'layout/header',
   'layout/footer',
   'layout/neat-grid',
-  'layout/whole-page';
+  'layout/whole-page',
+  'layout/navbar',
+  'layout/video',
+  'layout/article';
 
 // 5. Components
 @import
-  'components/button',
-  'components/navbar',
-  'components/video';
+  'components/button';
 
 // 6. Page-specific styles
 @import
