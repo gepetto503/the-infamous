@@ -6,8 +6,28 @@ html {
 *::after {
   box-sizing: inherit; }
 
+@media (min-width: 768px) and (max-width: 1023px) {
+  body {
+    background-color: black; } }
+@media (min-width: 1024px) {
+  body {
+    background-color: black; } }
+
+.header-bg-img {
+  height: 300px;
+  background: url("../images/the-infamous-small.jpg") center center no-repeat;
+  background-size: cover; }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .header-bg-img {
+      background-image: url("../images/large-banner.jpg"); } }
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .header h1 {
+    display: none; } }
+
 .container {
-  border: 1px solid blue; }
+  border: 1px solid blue;
+  background-color: black; }
   .container::after {
     clear: both;
     content: "";
@@ -15,27 +35,45 @@ html {
 
 .row {
   border: 1px solid red;
-  width: calc(100% - 40px);
+  width: calc(100%);
   float: left;
-  margin-left: 20px; }
+  margin-left: 0px; }
 
-.column {
-  height: 100px;
-  width: 100px;
+.featured {
   border: 1px solid green;
-  margin: 5px auto;
+  margin: 10px auto;
   width: calc(100% - 40px);
   float: left;
   margin-left: 20px; }
   @media (min-width: 768px) and (max-width: 1023px) {
-    .column {
-      width: calc(25% - 25px);
+    .featured {
+      width: calc(50% - 30px);
       float: left;
       margin-left: 20px; } }
   @media (min-width: 1024px) {
-    .column {
-      width: calc(33.33333% - 26.66667px);
+    .featured {
+      width: calc(50% - 30px);
       float: left;
       margin-left: 20px; } }
+
+.whole-page {
+  max-width: 1000px;
+  margin: auto; }
+
+.navbar {
+  height: 40px;
+  width: 100%;
+  background-color: #382271;
+  color: #e55a02;
+  padding: 11px; }
+
+.navbar h4 {
+  font-family: impact;
+  margin: 0; }
+
+#video {
+  border: 2px dashed purple;
+  max-width: 100%;
+  margin: auto; }
 
 /*# sourceMappingURL=output.css.map */

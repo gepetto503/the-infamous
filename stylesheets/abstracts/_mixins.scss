@@ -2,16 +2,17 @@
 // This file contains all application-wide Sass mixins.
 // -----------------------------------------------------------------------------
 
+//media queries
 $tablet-width: 768px;
 $desktop-width: 1024px;
 
-@mixin tablet {
+@mixin tablet { //sets min and max viewport widths for tablet size
   @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
     @content;
   }
 }
 
-@mixin desktop {
+@mixin desktop { // sets min viewport width for desktop size
   @media (min-width: #{$desktop-width}) {
     @content;
   }

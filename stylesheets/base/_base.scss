@@ -12,3 +12,12 @@ html {
 *::after {
   box-sizing: inherit;
 }
+
+body {
+  @include tablet {
+    background-color: black;
+  }
+  @include desktop {
+    background-color: black;
+  }
+}

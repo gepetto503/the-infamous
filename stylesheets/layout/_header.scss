@@ -1,3 +1,19 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
+
+
+.header-bg-img {
+  height: 300px;
+  background: url('../images/the-infamous-small.jpg') center center no-repeat;
+  background-size: cover;
+  @include tablet {
+    background-image: url('../images/large-banner.jpg');
+  }
+}
+
+.header h1 {
+  @include tablet {
+    display: none;
+  }
+}

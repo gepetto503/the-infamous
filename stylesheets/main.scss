@@ -25,11 +25,14 @@
 @import
   'layout/header',
   'layout/footer',
-  'layout/neat-grid';
+  'layout/neat-grid',
+  'layout/whole-page';
 
 // 5. Components
 @import
-  'components/button';
+  'components/button',
+  'components/navbar',
+  'components/video';
 
 // 6. Page-specific styles
 @import
